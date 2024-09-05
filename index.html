@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .form-container{
+            width: 370px;
+            flex-direction: column;
+            height: 390px;
+            background: rgb(60, 55, 55);
+            padding: 45px 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* gap: 153px; */
+        }
+        .form-container p{
+            text-align: center;
+            color: whitesmoke;
+            font-size: 22px;
+            
+        }
+        .inside{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 21px;
+        }
+        label{
+            color: whitesmoke;
+            font-size: 19px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <!-- <p>Connect with me</p> -->
+        <form action="https://formsubmit.co/your@email.com" method="POST">
+            <input type="hidden" name="_captche" value="false">
+            <div class="inside">
+                <label for="name">Name</label>
+                <input type="text" required id="name">
+            </div>
+            <div class="inside">
+                <label for="email">Email</label>
+                <input type="email" required id="email">
+            </div>
+            <div class="inside">
+                <label for="message">Message</label>
+                <textarea name="message" id="" rows="6"> </textarea>
+            </div>
+            <div class="inside">
+                <input type="submit" name="send mail" value="send">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
