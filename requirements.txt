@@ -1,0 +1,5 @@
+streamlit==1.37.1
+streamlit-javascript==0.1.5
+streamlit-modal==0.1.2
+streamlit-option-menu==0.3.12
+streamlit-server-state==0.17.1

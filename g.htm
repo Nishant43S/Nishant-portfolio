@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #0f1116;
+   
+}
+
+.container {
+    background-color: #385170;
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 410px; /* Slightly reduced width */
+}
+
+.contact-form {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #00ff88;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #00ff88;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #00ff88;
+}
+
+label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #666;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+input:focus + label,
+textarea:focus + label,
+input:valid + label,
+textarea:valid + label {
+    top: -16px;
+    font-size: 0.8rem;
+    color: #00ff88;
+}
+
+button {
+    padding: 10px;
+    background-color: #00ff88;
+    border: none;
+    color: #0f1116;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00e676;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        padding: 30px;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        max-width: 350px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input, textarea {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        max-width: 300px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    input, textarea {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 10px;
+        max-width: 280px;
+    }
+
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    input, textarea {
+        font-size: 0.75rem;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div  class="container">
+        <div class="contact-form">
+            <h1>Connect with Me</h1>
+            <form>
+                <div class="input-group">
+                    <input class="name" type="text" id="name" required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="input-group">
+                    <input class="email" type="email" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-group">
+                    <textarea class="msg" id="message" rows="4" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit" onclick="sendMail()">Send</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
