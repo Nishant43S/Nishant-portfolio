@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+            
+        /* sliding skills */
+
+        ::selection{
+            background: black;
+            color: palegreen;
+        }
+
+        body{
+            background: #0f1116 ; 
+        }
+
+        .body{
+            width: 87%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0 auto;
+            background: #0f1116 ;
+        }
+
+        .scroll{
+            position: relative;
+            display: flex;
+            width: 900px;
+            overflow: hidden;
+            -webkit-mask-image: linear-gradient(90deg, transparent, #0f1116 20%
+            , #0f1116 80%, transparent);
+        }
+
+        
+        .scroll div span{
+            display: inline-flex;
+            margin: 10px;
+            letter-spacing: 0.2em;
+            background: #333;
+            font-weight: 500;
+            color: whitesmoke;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: 0.5s ease-in-out;
+        }
+        
+        .scroll div span:hover{
+            background: #6643b5;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        
+        .scroll div{
+            white-space: nowrap;
+            cursor: default;
+            animation: scroll var(--time) linear infinite;
+            animation-delay: calc(var(--time)*-1);
+
+        }
+
+        .scroll div:nth-child(2){
+            animation: scroll2 var(--time) linear infinite;
+            animation-delay: calc(var(--time)/-2);
+        }
+
+        @keyframes scroll {
+            0%{
+                transform: translateX(100%);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes scroll2 {
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(-200%);
+            }
+        }
+
+
+        /* responsive code */
+
+        @media (max-width: 1200px) {
+    .scroll {
+        max-width: 105%; /* Increased width */
+    }
+}
+
+@media (max-width: 992px) {
+    .scroll {
+        max-width: 90%; /* Increased width */
+    }
+
+    .scroll div span {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .scroll {
+        max-width: 99%; /* Increased width */
+    }
+
+    .scroll div span {
+        font-size: 0.8em;
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .scroll {
+        max-width: 100%; /* Full width */
+    }
+
+    .scroll div span {
+        font-size: 0.7em;
+        padding: 3px 6px;
+        margin: 8px;
+    }
+}
+        
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="body">
+        <div class="scroll" style="--time:23s">
+            <div>
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Python</span>
+                <span>Java</span>
+                <span>C Programing</span>
+                <span>Java (DSA)</span>
+                <span>Python (DSA)</span>
+                <span>Python (OOPS)</span>
+                <span>Java (OOPS)</span>
+            </div>
+            <div>
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Python</span>
+                <span>Java</span>
+                <span>C Programing</span>
+                <span>Java (DSA)</span>
+                <span>Python (DSA)</span>
+                <span>Python (OOPS)</span>
+                <span>Java (OOPS)</span>
+            </div>
+        </div>
+        <div class="scroll" style="--time:28s">
+            <div>
+                <span>Canva</span>
+                <span>Prompt Engineering</span>
+                <span>Streamlit</span>
+                <span>MySql</span>
+                <span>MongoDB</span>
+                <span>R Programing</span>
+                <span>Web Scraping (Bs4)</span>
+                <span>Hugging Face</span>
+                <span>App Developer</span>
+                <span>Web Developer</span>
+            </div>
+            <div>
+                <span>Canva</span>
+                <span>Prompt Engineering</span>
+                <span>Streamlit</span>
+                <span>MySql</span>
+                <span>MongoDB</span>
+                <span>R Programing</span>
+                <span>Web Scraping (Bs4)</span>
+                <span>Hugging Face</span>
+                <span>App Developer</span>
+                <span>Web Developer</span>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>
