@@ -1,0 +1,60 @@
+.internship-title{
+    cursor: pointer;
+    text-shadow: 0 0 7px skyblue;
+}
+
+.internship-box {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    padding: 20px;
+    background: #0f1116;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(0, 0, 0, 0.23);
+    perspective: 1000px;
+    transition: box-shadow 0.3s ease-in-out;
+    margin: 0 auto; /* Center the box horizontally */
+    float: left;
+}
+
+.internship-box:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 12px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+  
+  /* For devices with screen width 768px or smaller (large tablets, small laptops, large mobiles) */
+  @media (max-width: 768px) {
+    .h3-heading {
+      font-size: 23px; /* For devices like iPad and large smartphones (e.g., 7-8 inch) */
+    }
+  }
+  
+  /* For devices with screen width 600px or smaller (standard mobile phones, small tablets) */
+@media (max-width: 600px) {
+    .h3-heading {
+      font-size: 21px; /* For devices like Pixel, iPhone 12 Pro (6.1 inch) */
+    }
+  }
+  
+  /* For devices with screen width 480px or smaller (smaller smartphones) */
+@media (max-width: 480px) {
+    .h3-heading {
+      font-size: 19px; /* For devices like older iPhones, small Android phones (5-6 inch) */
+    }
+  }
+  
+  /* For devices with screen width 360px or smaller (very small mobile phones) */
+@media (max-width: 360px) {
+    .h3-heading {
+      font-size: 18px; /* For compact phones like iPhone SE, Galaxy A20 (5.5-6 inch) */
+    }
+  }
+  
+  /* For devices with screen width 320px or smaller (smallest mobile devices) */
+@media (max-width: 320px) {
+    .h3-heading {
+      font-size: 14px; /* For smaller and older devices (3-4 inch screens) */
+    }
+  }
+

@@ -1,0 +1,59 @@
+.About-me{
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+.box2 {
+    width: 84%;
+    margin: 0 auto;
+    padding: 24px;
+    background: linear-gradient(145deg, #0c0f14, #12151b);
+    border-radius: 16px;
+    box-shadow: 
+        inset 8px 8px 16px rgba(0, 0, 0, 0.6),  /* Stronger inner shadow */
+        1px 1px 2px rgba(0, 0, 0, 0.3),  /* Outer shadow to enhance depth */
+        -1px -1px 2px rgba(255, 255, 255, 0.05); /* Outer highlight to enhance depth */
+    color: #ffffff;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.box2:hover {
+    box-shadow: 
+        inset 10px 10px 20px rgba(0, 0, 0, 0.6),  /* Intensified inner shadow on hover */
+        2px 2px 4px rgba(0, 0, 0, 0.3),  /* Slightly larger outer shadow */
+        -2px -2px 4px rgba(255, 255, 255, 0.05); /* Slightly larger outer highlight */
+    transform: translateY(-2px);  /* Subtle sinking effect */
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .box2 {
+        width: 95%; /* Adjust width for medium and smaller screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .box2 {
+        width: 100%; /* Full width for tablets and small laptops */
+        padding: 14px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 768px) {
+    .box2 {
+        padding: 12px; /* Adjust padding for tablets and smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .box2 {
+        padding: 10px; /* Adjust padding for mobile devices */
+    }
+}
+
